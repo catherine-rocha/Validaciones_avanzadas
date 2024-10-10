@@ -14,7 +14,7 @@
 
   <div class="container">
     <main>
-      <form action="#" method="get" class="row mt-4">
+      <form action="#" method="get" class="row mt-4" novalidate>
         <div class="col">
           <h1 class="mb-3">Registro</h1>
           <hr class="my-4">
@@ -22,37 +22,36 @@
             <div class="col-sm-6">
               <label for="nombre" class="form-label">Nombre</label>
               <input type="text" class="form-control" id="nombre" required>
-              <div class="text-danger small"></div>
+              <div class="invalid-feedback">Debe rellenar este campo.</div> <!-- Mensaje de error -->
             </div>
 
             <div class="col-sm-6">
               <label for="apellido" class="form-label">Apellido</label>
               <input type="text" class="form-control" id="apellido" required>
-              <div class="text-danger small"></div>
+              <div class="invalid-feedback">Debe rellenar este campo.</div> <!-- Mensaje de error -->
             </div>
 
             <div class="col-12">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" required>
-              <div class="text-danger small"></div>
+              <div class="invalid-feedback">Email no valido.</div> <!-- Mensaje de error -->
             </div>
 
             <div class="col-sm-6">
               <label for="password1" class="form-label">Contraseña</label>
               <input type="password" class="form-control" id="password1" required minlength="6">
-              <div class="text-danger small"></div>
+              <div class="invalid-feedback">Contraseña no valida.</div> <!-- Mensaje de error -->
             </div>
 
             <div class="col-sm-6">
               <label for="password2" class="form-label">Repetir contraseña</label>
               <input type="password" class="form-control" id="password2" required>
-              <div class="text-danger small"></div>
-            </div>
+              <div class="invalid-feedback">Debes repetir contraseña.</div> <!-- Mensaje de error -->
 
             <div class="col-sm-12">
               <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal"
                 data-bs-target="#modalTerminos">Términos del servicio</button>
-                <div class="text-danger small"></div>
+                <div class="invalid-feedback">Debes aceptar terminos y condiciones.</div> <!-- Mensaje de error -->
             </div>
 
 
