@@ -1,4 +1,4 @@
-document.getElementById("regBtn").addEventListener("click", function (event) {
+document.getElementById("form").addEventListener("submit", function (event) {
     const password1 = document.getElementById("password1").value;
     const password2 = document.getElementById("password2").value;
     const terminos = document.getElementById("terminos");
