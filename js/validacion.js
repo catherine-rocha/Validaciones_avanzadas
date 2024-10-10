@@ -64,16 +64,31 @@ inputs.forEach(input => {
         }
 
         // validar si las contraseñas coinciden en tR
-        let password1 = document.getElementById('password1').value;
+        let password1 = document.getElementById('password1');
         let password2 = document.getElementById('password2');
         
         // validacion segunda contraseña
-        if (password1 !== password2.value) {
+        if (password1.value !== password2.value || !password1.checkValidity()) {
             password2.classList.add('is-invalid'); // a estilo de error
             password2.classList.remove('is-valid'); // quitar el estilo de valido
         } else {
             password2.classList.remove('is-invalid'); // quita el de error si son iguales
             password2.classList.add('is-valid'); // aplica estilo de valido si son iguales
         }
+
+        let terminos = document.getElementById("terminos");
+        let btnTerminos = document.getElementById("btnTerminos");
+        let labelTerminos = document.getElementById("labelTerminos");
+        if (!terminos.checked){
+          btnTerminos.classList.add("terminosInvalid");
+          btnTerminos.classList.add("is-invalid");
+          labelTerminos.classList.add("terminosInvalid");
+          terminos.classList.add("is-invalid");
+        } else {
+          btnTerminos.classList.add("is-valid");
+          btnTerminos.classList.remove('terminosInvalid');
+          btnTerminos.classList.remove("is-invalid");
+        }
+
     });
 });
