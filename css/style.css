@@ -1,3 +1,15 @@
 .container {
   max-width: 960px;
 }
+
+.is-invalid {
+  border: 1px solid red;
+}
+
+.terminosInvalid {
+  color :red;
+}
+
+#btnTerminos {
+  border: none;
+}
